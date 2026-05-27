@@ -1,0 +1,6 @@
+{
+  "name": "Tính Lương Công Chức",
+  "description": "Ứng dụng tra cứu và tính toán chi tiết bảng lương dành cho cán bộ, công chức, viên chức theo Dự kiến Nghị định 182/2026/NĐ-CP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
