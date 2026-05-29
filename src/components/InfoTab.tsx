@@ -133,7 +133,14 @@ export default function InfoTab() {
       });
 
       if (!res.ok) {
-        throw new Error("Không thể kết nối với máy chủ tư vấn.");
+        let errMsg = "Không thể kết nối với máy chủ tư vấn.";
+        try {
+          const errData = await res.json();
+          if (errData && errData.error) {
+            errMsg = errData.error;
+          }
+        } catch (_) {}
+        throw new Error(errMsg);
       }
 
       const data = await res.json();
